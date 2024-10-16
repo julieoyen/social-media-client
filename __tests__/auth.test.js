@@ -1,3 +1,11 @@
+/**
+ * Auth Module
+ *
+ * This module handles user authentication, including login and logout functionality.
+ *
+ * @module Auth
+ */
+
 import { login } from '../src/js/api/auth/login';
 import { logout } from '../src/js/api/auth/logout';
 import { save, remove } from '../src/js/storage/index';
@@ -5,7 +13,7 @@ import { save, remove } from '../src/js/storage/index';
 // Mock the storage functions
 jest.mock('../src/js/storage/index', () => ({
   save: jest.fn(),
-  load: jest.fn(() => 'mockToken'), // Mock the load function to return a mock token
+  load: jest.fn(() => 'mockToken'),
   remove: jest.fn(),
 }));
 
