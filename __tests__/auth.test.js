@@ -51,7 +51,7 @@ describe('Auth Module', () => {
         }),
       });
 
-      const profile = await login('test@example.com', 'password123');
+      const profile = await login('juloye@stud.noroff.no', 'password123');
 
       expect(save).toHaveBeenCalledWith('token', 'mockToken');
       expect(save).toHaveBeenCalledWith('profile', { name: 'mockName' });
@@ -72,7 +72,7 @@ describe('Auth Module', () => {
       });
 
       await expect(
-        login('invalid@example.com', 'wrongPassword'),
+        login('invalid@stud.noroff.no', 'wrongPassword'),
       ).rejects.toThrow('Unauthorized');
     });
   });
